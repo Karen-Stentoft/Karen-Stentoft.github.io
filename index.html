@@ -1,11 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Data Viz Site</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive data visualizations exploring crime patterns in San Francisco.">
+    <title>SF Crime Visualizations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello World!</h1>
-    <p>This site will soon contain interactive data visualizations about crime in San Francisco.</p>
-    <img src="images/yearly_Drug_Offense_trends.png" alt="Yearly crime trends" style="max-width: 100%;">
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>San Francisco Crime Data</h1>
+            <p>Interactive visualizations exploring patterns and trends in reported crime across the city.</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="#trends">Trends</a>
+            <a href="#hourly">Hourly Patterns</a>
+            <a href="#about">About</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <!-- Yearly Trends Section -->
+        <section id="trends" class="section-card">
+            <h2>Yearly Drug Offense Trends</h2>
+            <p>The chart below shows how drug-related offenses have evolved year over year in San Francisco, revealing long-term shifts in enforcement and reporting.</p>
+            <figure class="figure">
+                <img src="images/yearly_Drug_Offense_trends.png" alt="Line chart showing yearly drug offense trends in San Francisco">
+                <figcaption>Yearly trend of reported drug offenses</figcaption>
+            </figure>
+        </section>
+
+        <!-- Hourly Crime Section -->
+        <section id="hourly" class="section-card">
+            <h2>Crime by Hour of Day</h2>
+            <p>An interactive look at how crime frequency varies throughout the day. Explore the visualization below to see which hours see the most reported incidents.</p>
+            <a class="card-link" href="visualizations/crime_hourly.html">Open interactive visualization</a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section-card">
+            <h2>About This Project</h2>
+            <p>This site was built as part of a Social Data course project. The data comes from publicly available San Francisco crime records and is visualized to uncover spatial and temporal patterns.</p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 &middot; Social Data Project</p>
+        </div>
+    </footer>
+
 </body>
 </html>
