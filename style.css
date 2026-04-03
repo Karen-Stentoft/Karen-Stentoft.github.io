@@ -1,0 +1,233 @@
+/* ===== Reset & Base ===== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  line-height: 1.7;
+  color: #e0e0e0;
+  background: #0f1117;
+  min-height: 100vh;
+}
+
+/* ===== Layout Container ===== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ===== Header / Hero ===== */
+header {
+  background: linear-gradient(135deg, #1a1c2e 0%, #0f1117 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 3.5rem 0 3rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.6rem;
+}
+
+header p {
+  font-size: 1.05rem;
+  color: #9ca3af;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* ===== Navigation ===== */
+nav {
+  background: rgba(15, 17, 23, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0.75rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav .container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.35rem 0;
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #60a5fa, #a78bfa);
+  border-radius: 1px;
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: #e0e0e0;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ===== Main Content ===== */
+main {
+  padding: 3rem 0 4rem;
+}
+
+/* ===== Section Card ===== */
+.section-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 2rem 2.2rem;
+  margin-bottom: 2.5rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-card:hover {
+  border-color: rgba(96, 165, 250, 0.2);
+  box-shadow: 0 4px 24px rgba(96, 165, 250, 0.05);
+}
+
+.section-card h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #f3f4f6;
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.section-card p {
+  color: #9ca3af;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.section-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== Images & Figures ===== */
+.figure {
+  margin: 1.5rem 0;
+}
+
+.figure img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.figure img:hover {
+  transform: scale(1.01);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.figure figcaption {
+  text-align: center;
+  font-size: 0.82rem;
+  color: #6b7280;
+  margin-top: 0.6rem;
+  font-style: italic;
+}
+
+/* ===== Visualization Embed ===== */
+.viz-frame {
+  width: 100%;
+  min-height: 500px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  background: #0a0b0f;
+}
+
+/* ===== Links ===== */
+a.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #60a5fa;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+
+a.card-link:hover {
+  color: #93c5fd;
+}
+
+a.card-link::after {
+  content: '→';
+  transition: transform 0.25s ease;
+}
+
+a.card-link:hover::after {
+  transform: translateX(3px);
+}
+
+/* ===== Footer ===== */
+footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 2rem 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 0.82rem;
+  color: #4b5563;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1.2rem;
+  }
+
+  header {
+    padding: 2.5rem 0 2rem;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .section-card {
+    padding: 1.5rem 1.4rem;
+  }
+
+  nav .container {
+    gap: 1.2rem;
+  }
+}
