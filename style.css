@@ -165,11 +165,14 @@ main {
 
 /* ===== Visualization Embed ===== */
 .viz-frame {
+  display: block;
   width: 100%;
-  min-height: 500px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  height: 600px;
+  border: none;
   border-radius: 12px;
+  overflow: hidden;
   background: #0a0b0f;
+  margin-top: 1rem;
 }
 
 /* ===== Links ===== */
