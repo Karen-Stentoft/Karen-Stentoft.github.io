@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <!-- Header -->
@@ -35,9 +37,11 @@
         <!-- Yearly Trends Section -->
         <section id="trends" class="section-card">
             <h2>Yearly Drug Offense Trends</h2>
-            <p>The chart below shows how drug-related offenses have evolved year over year in San Francisco, revealing long-term shifts in enforcement and reporting.</p>
+            <p>The chart below shows how drug-related offenses have evolved year over year in San Francisco, revealing
+                long-term shifts in enforcement and reporting.</p>
             <figure class="figure">
-                <img src="images/yearly_Drug_Offense_trends.png" alt="Line chart showing yearly drug offense trends in San Francisco">
+                <img src="images/yearly_Drug_Offense_trends.png"
+                    alt="Line chart showing yearly drug offense trends in San Francisco">
                 <figcaption>Yearly trend of reported drug offenses</figcaption>
             </figure>
         </section>
@@ -45,11 +49,10 @@
         <!-- Hourly Crime Section -->
         <section id="hourly" class="section-card">
             <h2>Map over San Francisco by crime</h2>
-            <p>Kort: Drug offenses I de forskellige distrikter - kort over San Francisco med antal drug offenses i de forskellige distrikter (måske udvikling gennem årene - har det ændret placering i byen?)</p>
+            <p>Kort: Drug offenses I de forskellige distrikter - kort over San Francisco med antal drug offenses i de
+                forskellige distrikter (måske udvikling gennem årene - har det ændret placering i byen?)</p>
             <figure class="figure">
-                <iframe 
-                    class="viz-frame"
-                    src="visualizations/drug_map.html">
+                <iframe class="viz-frame" src="visualizations/drug_map.html">
                 </iframe>
                 <figcaption>Density of Drug Offense crimes in San Francisco</figcaption>
             </figure>
@@ -60,7 +63,13 @@
         <!-- About Section -->
         <section id="about" class="section-card">
             <h2>Development of crime through the day</h2>
-            <p>Interaktivt: plot over hvilke tidspunkter på døgnet, som der er registreret kriminalitet igennem årene (Har 'måden' der handles med stoffer ændret sig gennem årene?)</p>
+            <p>Interaktivt: plot over hvilke tidspunkter på døgnet, som der er registreret kriminalitet igennem årene
+                (Har 'måden' der handles med stoffer ændret sig gennem årene?)</p>
+            <figure class="figure">
+                <iframe class="viz-frame" src="visualizations/crime_through_the_day.html">
+                </iframe>
+                <figcaption>Drug Offense crimes through the day</figcaption>
+            </figure>
         </section>
 
     </main>
@@ -73,4 +82,5 @@
     </footer>
 
 </body>
+
 </html>
