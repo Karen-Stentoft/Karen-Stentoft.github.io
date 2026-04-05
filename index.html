@@ -17,14 +17,15 @@
     <!-- Header -->
     <header>
         <div class="container">
-            <h1>San Francisco Crime Data</h1>
-            <p>Interactive visualizations exploring patterns and trends in reported crime across the city.</p>
+            <h1>The evolution of drug offenses in San Francisco</h1>
         </div>
     </header>
 
     <!-- Navigation -->
     <nav>
         <div class="container">
+            <a href="#intro">Introduction</a>
+            <a href="#data">Data</a>
             <a href="#trends">Yearly Trends</a>
             <a href="#hourly">Map over San Francisco</a>
             <a href="#about">Development through the day</a>
@@ -34,28 +35,91 @@
     <!-- Main Content -->
     <main class="container">
 
+
+        <!-- Introduction -->
+        <section id="intro" class="section-card">
+            <h2>Introduction</h2>
+            <p>
+                In recent years, San Francisco has frequently been mentioned in discussions about the opioid and fentanyl crisis in the United States. 
+                Media coverage and public debate often point to a growing problem with drug use and drug-related activity in the city. 
+                But to what extent is this reflected in official crime data?
+            </p>
+        
+            <p>
+                In this analysis, we use police records from the city of San Francisco covering the period from 2003 to 2025. 
+                The data is obtained from the official San Francisco open data portal and allows us to examine how registered drug-related offenses have evolved over time.
+            </p>
+        
+            <p>
+                We focus on identifying long-term trends, geographical patterns across the city, and temporal patterns in the data, 
+                in order to better understand whether recent developments differ from earlier years.
+            </p>
+        </section>
+
+        <!-- Data and methods -->
+        <section id="data" class="section-card">
+            <h2>Data</h2>
+            <p>
+                The data used in this analysis originates from the official records of the city of San Francisco, available through the open data portal.
+                Two datasets have been combined: one covering the period from 2003 to 2018 and another from 2018 to 2025.
+                Some preprocessing steps were applied to ensure consistency across the datasets.
+            </p>
+        </section>
+
         <!-- Yearly Trends Section -->
         <section id="trends" class="section-card">
-            <h2>Yearly Drug Offense Trends</h2>
-            <p>The chart below shows how drug-related offenses have evolved year over year in San Francisco, revealing
-                long-term shifts in enforcement and reporting.</p>
+            <h2>The development of drug offenses in San Francisco</h2>
+            <p>
+                We begin by examining how registered drug-related offenses have developed over time in San Francisco.
+            </p>
+            <p> 
+                To provide context, we compare drug offenses with a selection of other crime categories, referred to as the "focused crime categories". 
+                This allows us to assess whether changes in drug-related incidents follow broader crime trends or deviate from them.
+            </p>
+            <p> 
+                The figure below shows the development of these categories from 2003 to 2025, with drug offenses highlighted.
+            </p>
             <figure class="figure">
                 <img src="images/yearly_Drug_Offense_trends.png"
                     alt="Line chart showing yearly drug offense trends in San Francisco">
-                <figcaption>Yearly trend of reported drug offenses</figcaption>
+                <figcaption>Yearly development of reported drug offenses</figcaption>
             </figure>
+            <p> 
+                Overall, most crime categories show a declining trend in recent years. 
+                In contrast, drug-related offenses exhibit a different pattern, with a noticeable increase over the same period.
+            </p>
+            <p>
+                This divergence suggests that drug offenses do not simply follow the general development of crime in the city, 
+                but instead represent a distinct and evolving trend.
+            </p>
         </section>
 
         <!-- Hourly Crime Section -->
         <section id="hourly" class="section-card">
-            <h2>Map over San Francisco by crime</h2>
-            <p>Kort: Drug offenses I de forskellige distrikter - kort over San Francisco med antal drug offenses i de
-                forskellige distrikter (måske udvikling gennem årene - har det ændret placering i byen?)</p>
+            <h2>Geographical distribution of drug offenses</h2>
+        
+            <p>
+                To investigate the spatial patterns of drug-related offenses, we visualize the density of incidents across San Francisco using an interactive heatmap.
+                The map allows us to explore how these patterns evolve over time.
+            </p>
+        
             <figure class="figure">
-                <iframe class="viz-frame" src="visualizations/drug_map.html">
-                </iframe>
-                <figcaption>Density of Drug Offense crimes in San Francisco</figcaption>
+                <iframe class="viz-frame" src="visualizations/drug_map.html"></iframe>
+                <figcaption>Density of drug-related offenses across San Francisco</figcaption>
             </figure>
+        
+            <p>
+                The distribution of drug offenses is not uniform across the city. Instead, incidents are highly concentrated in specific areas,
+                indicating the presence of persistent hotspots.
+            </p>
+        
+            <p>
+                This spatial concentration highlights that drug-related activity is localized rather than widespread, 
+                and that changes in overall trends are closely tied to a limited number of high-density areas.
+                Over time, the distribution of drug-related offenses becomes increasingly concentrated in central areas of the city, particularly around the Tenderloin district. 
+                While earlier years show a more dispersed pattern with activity present in areas such as Bayview and Richmond, 
+                recent data suggests that incidents are becoming more localized in a smaller number of high-density hotspots.
+            </p>
         </section>
 
 
@@ -66,7 +130,8 @@
             <p>Interaktivt: plot over hvilke tidspunkter på døgnet, som der er registreret kriminalitet igennem årene
                 (Har 'måden' der handles med stoffer ændret sig gennem årene?)</p>
             <figure class="figure">
-                <iframe class="viz-frame" src="visualizations/crime_through_the_day.html">
+                <iframe 
+                class="viz-frame" src="visualizations/crime_hourly_interactive.html">
                 </iframe>
                 <figcaption>Drug Offense crimes through the day</figcaption>
             </figure>
